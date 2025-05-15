@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation">
+  <meta name="keywords" content="world model, robot manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlowDreamer</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">FlowDreamer: A RGB-D World Model with Flow-based Motion
+              Representations for Robot Manipulation</h1>
+
+            <!-- <h3 class="title is-4">arXiv Preprint 2025</h3> -->
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/sharinka0715">Jun Guo</a>*<sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://jeasinema.github.io/">Xiaojian Ma</a>*<sup>#1</sup>,</span>
+              <span class="author-block">
+                <a href="https://yikaiw.github.io/">Yikai Wang</a>*<sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/MIy2003">Min Yang</a><sup>1,4</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/thuliuhuaping">Huaping Liu</a><sup>#2</sup>,</span>
+              <span class="author-block">
+                <a href="https://liqing.io/">Qing Li</a><sup>#1</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>State Key Laboratory of General Artificial Intelligence
+                (BIGAI),</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>2</sup>Department of Computer Science and Technology, Tsinghua
+                University</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>3</sup>School of Artificial Intelligence, Beijing Normal University</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>4</sup>School of Artificial Intelligence and Automation, Huazhong
+                University of Science and Technology</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">* Equal Contribution,</span>
+              <span class="author-block"># Corresponding Author</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Released Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Model Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href="https://huggingface.co/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Models </span>
+                  </a>
+                </span>
+              </div>
+            </div> -->
+
+                <h2 class="subtitle has-text-justified">
+                </h2>
+                <img width="60%" src="static/images/teaser.png">
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper investigates training better visual world models for robot manipulation, i.e., models that can
+              predict future visual observations by conditioning on past frames and robot actions. Specifically, we
+              consider world models that operate on RGB-D frames (RGB-D world models). As opposed to canonical
+              approaches that handle dynamics prediction mostly implicitly and reconcile it with visual rendering in a
+              single model, we introduce FlowDreamer, which adopts 3D scene flow as explicit motion representations.
+              FlowDreamer first predicts 3D scene flow from past frame and action conditions with a U-Net, and then a
+              diffusion model will predict the future frame utilizing the scene flow. FlowDreamer is trained end-to-end
+              despite its modularized nature. We conduct experiments on 4 different benchmarks, covering both video
+              prediction and visual planning tasks. The results demonstrate that FlowDreamer achieves better performance
+              compared to other baseline RGB-D world models by 7% on semantic similarity, 11% on pixel quality, and 6%
+              on success rate in various robot manipulation domains.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="rows">
+        <div class="row is-full-width half-width">
+          <h2 class="title is-3"><span>FlowDreamer</span></h2>
+          <div class="content has-text-centered">
+            <img src="./static/images/framework.png" class="interpolation-image" width="95%" />
+          </div>
+          <p class="content has-text-justified">
+            FlowDreamer applies 3D scene flow as a general motion representation for RGB-D world models, and explicitly
+            predicts the scene flow by conditioning on past frames and robot actions.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="section" id="video-prediction">
+    <div class="container is-max-desktop">
+      <div class="rows">
+        <h2 class="title is-3">Video Prediction</h2>
+        <p class="content has-text-justified">
+          We show some video prediction results of FlowDreamer on RT-1 SimplerEnv and Language Table. In each video, the
+          left image is the ground truth, the middle image is the predicted video, and the right image is the predicted
+          scene flow.
+        </p>
+        <div class="zoom_container has-text-centered">
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rt1_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rt1_5.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rt1_3.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rt1_4.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/lt_5.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/lt_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/lt_3.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/lt_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visual-planning">
+    <div class="container is-max-desktop">
+
+      <div class="rows">
+        <h2 class="title is-3">Visual Planning</h2>
+        <p class="content has-text-justified">
+          We show some prediction results on VP<sup>2</sup> benchmark. In each video, the left image is the ground
+          truth, the middle image is the predicted video, and the right image is the predicted scene flow.
+        </p>
+
+        <div class="zoom_container has-text-centered">
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rd_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rd_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rd_3.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rd_5.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rs_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rs_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rs_3.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls loop muted playsinline width="45%">
+            <source src="./static/videos/rs_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="citation">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@misc{guo2025flowdreamer,
+  title={FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation},
+  author={Guo, Jun and Ma, Xiaojian and Wang, Yikai and Yang, Min and Liu, Huaping and Li, Qing},
+  year={2025},
+  primaryClass={cs.RO}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

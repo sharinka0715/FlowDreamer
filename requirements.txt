@@ -1,0 +1,15 @@
+diffusers[torch]
+transformers
+opencv-python-headless
+decord
+imageio
+scipy
+scikit-image
+lightning
+ffmpeg
+piqa
+lpips
+pytorch_fid
+tifffile[all]
+tyro
+tensorboard

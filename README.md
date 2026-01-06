@@ -1,18 +1,33 @@
-# FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation
+<p align="center">
+  <h3 align="center"><strong>[RA-L 2025] FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation</strong></h3>
 
-<p align="left">
-    <a href='https://arxiv.org/pdf/2505.10075'>
-      <img src='https://img.shields.io/badge/Paper-PDF-red?style=plastic&logo=adobeacrobatreader&logoColor=red' alt='Paper PDF'>
-    </a>
-    <a href='https://arxiv.org/abs/2505.10075'>
-      <img src='https://img.shields.io/badge/Paper-arXiv-green?style=plastic&logo=arXiv&logoColor=green' alt='Paper arXiv'>
-    </a>
-    <a href='https://sharinka0715.github.io/FlowDreamer/'>
-      <img src='https://img.shields.io/badge/Project-Page-blue?style=plastic&logo=Google%20chrome&logoColor=blue' alt='Project Page'>
-    </a>
+  <p align="center">
+    <a href="https://github.com/sharinka0715">Jun Guo</a><sup>*1,2</sup>,
+    <a href="https://jeasinema.github.io/">Xiaojian Ma</a><sup>*†1</sup>,
+    <a href="https://yikaiw.github.io/">Yikai Wang</a><sup>*3</sup>,
+    <a href="https://github.com/MIy2003">Min Yang</a><sup>1,4</sup>,
+    <a href="https://sites.google.com/site/thuliuhuaping">Huaping Liu</a><sup>†2</sup>,
+    <a href="https://liqing.io/">Qing Li</a><sup>†1</sup>
+    <br>
+    <sup>*</sup>Equal contribution.
+    <sup>**</sup>Corresponding author.
+    <br>
+    <sup>1</sup>State Key Laboratory of General Artificial Intelligence (BIGAI),
+    <br>
+    <sup>2</sup>Department of Computer Science and Technology, Tsinghua University,
+    <br>
+    <sup>3</sup>School of Artificial Intelligence, Beijing Normal University,
+    <br>
+    <sup>4</sup>School of Computer Science and Technology, University of Science and Technology of China
 </p>
 
-This repository is the official implemetation of the paper "[FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](https://arxiv.org/abs/2505.10075)".
+<div align="center">
+<a href='https://arxiv.org/abs/2505.10075'><img src='https://img.shields.io/badge/arXiv-2505.10075-b31b1b.svg'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='https://sharinka0715.github.io/FlowDreamer/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+This repository is the official implemetation of the paper in IEEE RA-L 2025: "[FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](https://arxiv.org/abs/2505.10075)".
 
 ![Overview](./assets/framework.png)
 
@@ -112,8 +127,8 @@ If you find this project useful, please cite our paper as:
 @article{guo2025flowdreamer,
   title={FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation},
   author={Guo, Jun and Ma, Xiaojian and Wang, Yikai and Yang, Min and Liu, Huaping and Li, Qing},
-  journal={arXiv preprint arXiv:2505.10075},
-  year={2025}
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
 }
 ```
 

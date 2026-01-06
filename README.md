@@ -1,5 +1,5 @@
 <p align="center">
-  <h3 align="center"><strong>[RA-L 2025] FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation</strong></h3>
+  <h2 align="center"><strong>[RA-L 2025] FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation</strong></h2>
 
   <p align="center">
     <a href="https://github.com/sharinka0715">Jun Guo</a><sup>*1,2</sup>,

@@ -124,11 +124,11 @@ The FID calculation code is based on [mseitzer/pytorch-fid](https://github.com/m
 
 If you find this project useful, please cite our paper as:
 ```bibtex
-@article{guo2025flowdreamer,
+@article{guo2026flowdreamer,
   title={FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation},
   author={Guo, Jun and Ma, Xiaojian and Wang, Yikai and Yang, Min and Liu, Huaping and Li, Qing},
   journal={IEEE Robotics and Automation Letters},
-  year={2025},
+  year={2026},
 }
 ```
 

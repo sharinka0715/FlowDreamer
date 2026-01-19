@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center"><strong>[RA-L 2025] FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation</strong></h2>
+  <h2 align="center"><strong>[RA-L 2026] FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation</strong></h2>
 
   <p align="center">
     <a href="https://github.com/sharinka0715">Jun Guo</a><sup>*1,2</sup>,
@@ -27,7 +27,7 @@
 </div>
 
 
-This repository is the official implemetation of the paper in IEEE RA-L 2025: "[FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](https://arxiv.org/abs/2505.10075)".
+This repository is the official implemetation of the paper in IEEE RA-L 2026: "[FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation](https://ieeexplore.ieee.org/document/11345941)".
 
 ![Overview](./assets/framework.png)
 
